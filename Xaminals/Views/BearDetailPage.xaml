@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="Xaminals.Views.BearDetailPage"
+             Title="Bear Details">
+    <ScrollView>
+        <StackLayout Margin="20">
+            <Label Text="{Binding Name}" 
+                   HorizontalOptions="Center" 
+                   Style="{DynamicResource TitleStyle}" />
+            <Label Text="{Binding Location}" 
+                   FontAttributes="Italic" 
+                   HorizontalOptions="Center" />
+            <Image Source="{Binding ImageUrl}" 
+                   HeightRequest="200" 
+                   WidthRequest="200" 
+                   HorizontalOptions="FillAndExpand" />
+            <Label Text="{Binding Details}" 
+                   Style="{DynamicResource BodyStyle}" />
+            <Button Text="Partager" Clicked="sharedTootherapp"/>
+            <Button Text="Commander" Clicked="Choose"/>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>
